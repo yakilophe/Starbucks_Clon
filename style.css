@@ -1,130 +1,377 @@
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-       
-        header {
-            background-color: #006341;
-            padding: 20px;
-            text-align: center;
-        }
+/* Selector de tipo. font-family, font-size, color
+   y line-height se heredan a todos los hijos. */
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1e3932;
+  background-color: #ffffff;
+}
 
-        header a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
 
-        h1.logo {
-            color: white;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
 
-    
-        section.hero {
-            background-color: #f0f0f0;
-            padding: 30px;
-            text-align: center;
-        }
+h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
 
-        section.hero h2 {
-            color: #006341;
-            font-size: 28px;
-            margin: 10px 0;
-        }
+h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
 
-        main {
-            width: 90%;
-            margin: 20px auto;
-        }
+p {
+  font-size: 0.9rem;
+}
 
-        
-        h2.titulo-seccion {
-            color: #006341;
-            font-size: 22px;
-            margin: 30px 0 15px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #006341;
-        }
 
-       
-        article {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin-bottom: 15px;
-            text-align: center;
-            background-color: white;
-        }
+hr {
+  border: none;
+  border-top: 1px solid #cccccc;
+  margin-bottom: 2rem;
+}
 
-        article h3 {
-            color: #006341;
-            margin: 10px 0;
-            font-size: 18px;
-        }
+/* HEADER ── */
 
-        article p {
-            color: #666;
-        }
+header {
+  display: flex;
+  height: 70px;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 2rem;
+}
 
-        figure.circulo {
-            width: 120px;
-            height: 120px;
-            background-color: #ddd;
-            border-radius: 50%;
-            margin: 0 auto;
-        }
+/* Selector de clase */
+.logo {
+  display: inline-block;
+  text-decoration: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-right: 2rem;
+}
 
-       
-        a.boton {
-            background-color: #006341;
-            color: white;
-            padding: 8px 16px;
-            text-decoration: none;
-            display: inline-block;
-            margin: 5px;
-            border-radius: 20px;
-        }
+/* Selector de clase */
+.logo-img {
+  height: 54px;
+  width: 54px;
+}
 
-        a.boton-blanco {
-            background-color: white;
-            color: #006341;
-        }
+/* Selector de clase */
+.nav-principal {
+  display: flex;
+  flex: 1;
+}
 
-      
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 30px 20px;
-            margin-top: 30px;
-            text-align: center;
-        }
+.nav-principal a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #1e3932;
+  padding: 0 1rem;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
 
-        footer a {
-            color: #ccc;
-            text-decoration: none;
-            display: block;
-            margin: 10px 0;
-        }
 
-        footer h3 {
-            color: white;
-            margin: 20px 0 10px;
-        }
+.nav-principal a:hover {
+  color: #006341;
+  text-decoration: underline;
+}
 
-        p.copyright {
-            font-size: 12px;
-            color: #999;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #555;
-        }
 
-        .enlinea a {
-            display: inline;
-            margin: 0 10px;
-        }
-    
+.nav-link--activo {
+  color: #1e3932;
+}
+
+/* Selector de clase */
+.nav-acciones {
+  display: flex;
+}
+
+/* Selector descendiente */
+.nav-acciones a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Lato', Arial, sans-serif; 
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  margin-left: 8px;
+  padding: 0 1rem;
+  border-radius: 100px;
+  color: #1e3932;
+}
+
+/* Selector de clase: botón Localizar Tienda */
+.btn-tienda {
+  font-weight: 400;
+  color: #1e3932;
+}
+
+.btn-tienda:hover {
+  color: #006341;
+}
+
+/* Selector de clase: botón Ingresar */
+.btn-ingresar {
+  border: 1px solid #1e3932;
+}
+
+.btn-ingresar:hover {
+  background-color: #1e3932;
+  color: #ffffff;
+}
+
+/* Selector de clase: botón Únete */
+.btn-unete {
+  background-color: #1e3932;
+  color: #ffffff;
+  border: 1px solid #1e3932;
+}
+
+/*Esto lo ví en mi universidad*/
+.btn-unete:hover {
+  background-color: #006341 !important;
+  border-color: #006341 !important;
+}
+
+/* Banner */
+/* Selector de clase */
+.banner {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-sub {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #1e3932;
+  margin-bottom: 0.4rem;
+}
+
+.banner-titulo {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #1e3932;
+  line-height: 1.25;
+  max-width: 580px;
+}
+
+/* main*/
+/* Selector de tipo */
+main {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 2rem 4rem;
+}
+
+/* sec cat*/
+/* Selector de clase */
+.categoria {
+  margin-bottom: 3rem;
+}
+
+.categoria-titulo {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1e3932;
+  margin-bottom: 0.5rem;
+}
+
+/* ── LISTA DE PRODUCTOS ──
+   Selector de clase. display: flex pone
+   los li en fila horizontal. */
+.productos-lista {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+/* Selector de tipo dentro de clase:
+   .productos-lista li — especificidad 11 pts */
+.productos-lista li {
+  margin-right: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* productt*/
+/* Selector de clase */
+.producto {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 180px;
+  color: #1e3932;
+}
+
+/* Hover: .producto:hover = 20 pts */
+.producto:hover {
+  color: #006341;
+}
+
+/* Selector de tipo: figure dentro de .producto
+   Especificidad: 11 pts (clase + tipo) */
+.producto figure {
+  display: block;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: #1e3932;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+/* Selector descendiente: img dentro de figure */
+.producto figure img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Selector de clase */
+.producto-nombre {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1e3932;
+}
+
+/* Selector descendiente: al hacer hover en .producto,
+   el nombre cambia de color.
+   Especificidad: 20 pts — vence a .producto-nombre (10 pts) */
+.producto:hover .producto-nombre {
+  color: #006341;
+}
+
+/*Prefooter*/
+/* Selector de clase */
+.prefooter {
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  padding: 3rem 2rem;
+  display: flex;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prefooter-col {
+  margin-right: 5rem;
+}
+
+.prefooter-titulo {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e3932;
+  margin-bottom: 1rem;
+}
+
+/* Selector de clase */
+.prefooter-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Selector de tipo dentro de clase */
+.prefooter-lista li {
+  margin-bottom: 0.6rem;
+}
+
+/* Selector descendiente */
+.prefooter-lista a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #1e3932;
+}
+
+.prefooter-lista a:hover {
+  color: #006341;
+  text-decoration: underline;
+}
+
+/*FOOTER*/
+/* Selector de tipo */
+footer {
+  background-color: #1e3932;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Selector de clase */
+.redes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Selector descendiente */
+.redes a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0.75rem;
+}
+
+.redes a:hover {
+  text-decoration: underline;
+  color: #cba258;
+}
+
+/* Selector de clase */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Selector descendiente */
+.footer-nav a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.2rem 0.6rem;
+}
+
+.footer-nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Selector de clase */
+.copyright {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
