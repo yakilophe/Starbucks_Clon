@@ -1,100 +1,199 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Starbucks</title>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menú | Starbucks México</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <header>
-        <h1 class="logo">STARBUCKS</h1>
-        <nav>
-            <a href="menu.html">Menú</a>
-            <a href="#">Rewards</a>
-            <a href="#" class="boton boton-blanco">Ingresar</a>
-            <a href="#" class="boton">Únete</a>
-        </nav>
-    </header>
+
+ 
+  <header>
+  <a href="/" class="logo">
+  <img
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png"
+        alt="Starbucks"
+        class="logo-img"
+      />
+    </a>
+
+    <nav class="nav-principal">
+      <a href="/menu" class="nav-link nav-link--activo">MENU</a>
+      <a href="https://rewards.starbucks.mx" class="nav-link" target="_blank">REWARDS</a>
+    </nav>
+
+    <nav class="nav-acciones">
+      <a href="/stores" class="btn-tienda">📍 Localizar Tienda</a>
+      <a href="https://rewards.starbucks.mx/login" class="btn-ingresar">Ingresar</a>
+      <a href="https://rewards.starbucks.mx/register" class="btn-unete">Únete</a>
+    </nav>
+  </header>
 
 
-    <section class="hero">
-        <p>¡Disfrútalos!</p>
-        <h2>Conoce nuestras bebidas y alimentos</h2>
+  <section class="banner">
+    <p class="banner-sub">¡Disfrútalos!</p>
+    <h1 class="banner-titulo">Conoce nuestras bebidas y alimentos de temporada</h1>
+  </section>
+  
+  <main>
+    <section class="categoria">
+      <h2 class="categoria-titulo">Bebidas</h2>
+      <hr />
+      <ul class="productos-lista">
+        <li>
+        <a href="/menu/bebidas/calientes" class="producto">
+        <figure class="producto-figura">
+        <img
+                src="idk"
+                alt="Bebidas calientes"
+              />
+
+        </figure>
+       <p class="producto-nombre">Bebidas calientes</p>
+        </a>
+        </li>
+        <li>
+        <a href="/menu/bebidas/frappuccinosr" class="producto">
+        <figure class="producto-figura">
+        <img
+            src="idkkk"
+            alt="Frappuccino®"
+              />
+          </figure>
+          <p class="producto-nombre">Frappuccino®</p>
+          </a>
+          </li>
+
+          <li>
+          <a href="/menu/bebidas/frias" class="producto">
+          <figure class="producto-figura">
+            <img
+                src="idk"
+                alt="Bebidas Frías"
+              />
+            </figure>
+            <p class="producto-nombre">Bebidas Frías</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="/menu/bebidas/bebidas-base-te" class="producto">
+            <figure class="producto-figura">
+              <img
+                src="idk"
+                alt="Bebidas Base Té"
+              />
+            </figure>
+            <p class="producto-nombre">Bebidas Base Té</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="/menu/bebidas/cold-brew" class="producto">
+            <figure class="producto-figura">
+              <img
+                src="idk"
+                alt="Cold Brew"
+              />
+            </figure>
+            <p class="producto-nombre">Cold Brew</p>
+          </a>
+        </li>
+
+      </ul>
     </section>
 
-    <main>
-        
-        <h2 class="titulo-seccion">BEBIDAS</h2>
-        
-        <article>
-            <figure class="circulo"></figure>
-            <h3>Bebidas calientes</h3>
-            <p>Cafés, espresso y chocolate</p>
-        </article>
+   
+    <section class="categoria">
+      <h2 class="categoria-titulo">Alimentos</h2>
+      <hr />
 
-        <article>
-            <figure class="circulo"></figure>
-            <h3>Frappuccino®</h3>
-            <p>Bebidas heladas y cremosas</p>
-        </article>
+      <ul class="productos-lista">
 
-        <article>
-            <figure class="circulo"></figure>
-            <h3>Bebidas Frías</h3>
-            <p>Refrescantes y deliciosas</p>
-        </article>
+        <li>
+          <a href="/menu/alimentos/elige-tu-complemento-favorito" class="producto">
+            <figure class="producto-figura">
+              <img
+                src="idk"
+                alt="Elige tu complemento favorito"
+              />
+            </figure>
+            <p class="producto-nombre">Elige tu complemento favorito</p>
+          </a>
+        </li>
 
-        <article>
-            <figure class="circulo"></figure>
-            <h3>Bebidas de Té</h3>
-            <p>Tés, matcha y más</p>
-        </article>
+      </ul>
+    </section>
 
-        <h2 class="titulo-seccion">ALIMENTOS</h2>
-        
-        <article>
-            <figure class="circulo"></figure>
-            <h3>Complementos</h3>
-            <p>Sándwiches, paninis y bagels</p>
-        </article>
+    
+    <section class="categoria">
+      <h2 class="categoria-titulo">Café en grano</h2>
+      <hr />
 
-        <article>
-            <figure class="circulo"></figure>
-            <h3>Panadería</h3>
-            <p>Panes, pasteles y postres</p>
-        </article>
+      <ul class="productos-lista">
 
+        <li>
+          <a href="/menu/cafe-en-grano/elige-tu-cafe-favorito" class="producto">
+            <figure class="producto-figura">
+              <img
+                src="idk"
+                alt="Elige tu café favorito"
+              />
+            </figure>
+            <p class="producto-nombre">Elige tu café favorito</p>
+          </a>
+        </li>
 
-        <h2 class="titulo-seccion">CAFÉ EN GRANO</h2>
-        
-        <article>
-            <figure class="circulo"></figure>
-            <h3>Café favorito</h3>
-            <p>Café en grano y molido</p>
-        </article>
+      </ul>
+    </section>
 
-    </main>
+  </main>
 
-    <footer>
-        <h3>Sobre Nosotros</h3>
-        <a href="#">Trabaja con nosotros</a>
-        <a href="#">Historias Starbucks</a>
-        
-        <h3>Atención al cliente</h3>
-        <a href="#">Contáctanos</a>
-        <a href="#">Facturas Electrónicas</a>
-        
-        <h3>Síguenos</h3>
-        <p class="enlinea">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
-        </p>
+  <section class="prefooter">
 
-        <p class="copyright">
-            © 2026 Starbucks. Todos los derechos reservados.
-        </p>
-    </footer>
+    <article class="prefooter-col">
+      <h3 class="prefooter-titulo">Sobre Nosotros</h3>
+      <ul class="prefooter-lista">
+        <li><a href="/seccion/trabaja-con-nosotros">Trabaja con nosotros</a></li>
+        <li><a href="https://historias.starbucks.com/es/" target="_blank">Historias Starbucks</a></li>
+      </ul>
+    </article>
+
+    <article class="prefooter-col">
+      <h3 class="prefooter-titulo">Atención al cliente</h3>
+      <ul class="prefooter-lista">
+        <li><a href="https://rewards.starbucks.mx/atencion-cliente">Contáctanos</a></li>
+        <li><a href="https://alsea.interfactura.com/RegistroDocumento.aspx?opc=Starbucks">Facturas Electrónicas</a></li>
+        <li><a href="/seccion/experiencia-starbucks">Formas de comprar</a></li>
+      </ul>
+    </article>
+
+  </section>
+
+  
+  <footer>
+
+    <nav class="redes">
+      <a href="https://www.facebook.com/StarbucksMexico" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/starbucksMex/" target="_blank">Instagram</a>
+      <a href="https://twitter.com/StarbucksMex" target="_blank">Twitter</a>
+      <a href="https://www.youtube.com/user/StarbucksMexico" target="_blank">YouTube</a>
+    </nav>
+
+    <nav class="footer-nav">
+      <a href="/articulo/accesibilidad-web">Accesibilidad Web</a>
+      <a href="/articulo/aviso-de-privacidad">Aviso de Privacidad</a>
+      <a href="/seccion/boletines">Boletines</a>
+      <a href="/articulo/condiciones-de-uso-1">Condiciones de uso</a>
+      <a href="/articulo/mapa-del-sitio">Mapa del sitio</a>
+      <a href="/articulo/preferencias-sobre-cookie">Preferencias sobre cookies</a>
+    </nav>
+
+    <p class="copyright">© 2026. Starbucks Coffee Company. Reservados todos los derechos.</p>
+
+  </footer>
+
 </body>
 </html>
