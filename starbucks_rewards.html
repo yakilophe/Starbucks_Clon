@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starbucks Rewards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="rewards.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <nav class="topbar" aria-label="Principal">
+
+      <section class="topbar-left">
+
+        <!-- Logo -->
+        <a href="index.html" class="brand-link" aria-label="Ir al inicio">
+          <img
+            class="brand-logo"
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/200px-Starbucks_Corporation_Logo_2011.svg.png"
+            alt="Starbucks"
+          />
+        </a>
+
+        <!-- Links de navegación (REWARDS activo) -->
+        <ul class="topbar-menu">
+          <li><a href="starbucks_menu.html">MENÚ</a></li>
+          <li><a href="starbucks_rewards.html" class="is-active">REWARDS</a></li>
+        </ul>
+
+      </section>
+
+      <!-- Botones de acción -->
+      <ul class="topbar-actions">
+        <li><a href="#" class="store-link">📍 LOCALIZA TU TIENDA</a></li>
+        <li><a href="starbucks_login.html" class="pill pill-outline">Inicia Sesión</a></li>
+        <li><a href="starbucks_register.html" class="pill pill-dark">Únete Ahora</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <!-- ===== LAYOUT SPLIT (izquierda fija | derecha scroll) ===== -->
+  <main class="rewards-layout">
+
+    <!-- ── PANEL IZQUIERDO (hero verde fijo) ── -->
+    <aside class="hero-panel">
+      <section class="hero-inner">
+
+        <p class="hero-brand">
+          STARBUCKS<sup>®</sup>
+          <span>REWARDS</span>
+        </p>
+
+        <h1 class="hero-title">Holaaaaa, café gratis</h1>
+
+        <!-- Botones del hero -->
+        <nav class="hero-actions" aria-label="Acciones Rewards">
+          <a href="starbucks_login.html" class="pill pill-hero-outline">Inicia Sesión</a>
+          <a href="starbucks_register.html" class="pill pill-hero-light">Únete Ahora</a>
+        </nav>
+
+        <!-- Teléfono decorativo con estrellas -->
+        <figure class="hero-phone-wrap">
+          <span class="hero-star hero-star-a">★</span>
+          <span class="hero-star hero-star-b">★</span>
+          <span class="hero-star hero-star-c">★</span>
+
+          <article class="hero-phone">
+            <section class="hero-phone-screen">
+              <div class="hero-phone-circle">★</div>
+              <p class="hero-phone-copy">Starbucks<br />Rewards</p>
+              <p class="hero-phone-pill">★ 70 pts</p>
+            </section>
+          </article>
+        </figure>
+
+      </section>
+    </aside>
+
+
+    <!-- ── PANEL DERECHO (contenido con scroll) ── -->
+    <section class="content-panel">
+
+
+      <!-- MÓDULO 1: Beneficios nivel Green -->
+      <section class="module module-white module-green">
+        <h2>
+          <strong>Únete a Starbucks Rewards</strong> y desbloquea beneficios al ser socio
+          Nivel Green, todo mientras obtienes estrellas
+        </h2>
+
+        <section class="benefits-grid" aria-label="Beneficios nivel green">
+
+          <article class="benefit-card">
+            <figure class="benefit-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="28" y="35" width="44" height="50" rx="6" fill="#234e3f"/>
+                <rect x="33" y="40" width="34" height="40" rx="4" fill="#1e3932"/>
+                <ellipse cx="50" cy="35" rx="22" ry="6" fill="#3a7a5a"/>
+                <circle cx="72" cy="60" r="16" fill="#f2d8c3"/>
+                <circle cx="68" cy="56" r="3.2" fill="#111"/>
+                <circle cx="76" cy="56" r="3.2" fill="#111"/>
+                <ellipse cx="72" cy="66" rx="5" ry="3" fill="#111"/>
+                <path d="M23 49c6-4 6-10 0-14" fill="none" stroke="#b68b3d" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </figure>
+            <p>Disfruta antes que nadie de lanzamientos exclusivos</p>
+          </article>
+
+          <article class="benefit-card">
+            <figure class="benefit-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="31" y="40" width="38" height="44" rx="6" fill="#d5ae5a"/>
+                <rect x="35" y="45" width="30" height="35" rx="4" fill="#f5f5f2"/>
+                <ellipse cx="50" cy="40" rx="19" ry="5" fill="#c59840"/>
+                <rect x="55" y="16" width="5" height="28" rx="2" fill="#be8c2e"/>
+                <circle cx="50" cy="63" r="8" fill="#006241"/>
+                <path d="M29 35l4 4M25 40l5-1" stroke="#d7d7d7" stroke-width="2" />
+              </svg>
+            </figure>
+            <p>Rellena tu vaso de café del día</p>
+          </article>
+
+          <article class="benefit-card">
+            <figure class="benefit-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="30" y="44" width="40" height="40" rx="6" fill="#c59a46"/>
+                <rect x="35" y="48" width="30" height="32" rx="4" fill="#f5f5f2"/>
+                <ellipse cx="50" cy="44" rx="20" ry="5" fill="#d8d8d8"/>
+                <rect x="40" y="20" width="4" height="28" rx="2" fill="#d7d7d7"/>
+                <rect x="50" y="18" width="4" height="30" rx="2" fill="#d7d7d7"/>
+                <rect x="60" y="22" width="4" height="26" rx="2" fill="#d7d7d7"/>
+              </svg>
+            </figure>
+            <p>Ven por tu bebida de cumpleaños</p>
+          </article>
+
+          <article class="benefit-card">
+            <figure class="benefit-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="34" y="16" width="30" height="56" rx="6" fill="#8d8d8d"/>
+                <rect x="38" y="20" width="22" height="46" rx="3" fill="#f6f6f6"/>
+                <circle cx="49" cy="42" r="10" fill="#006241"/>
+                <path d="M67 65c0-8 6-12 10-12" fill="none" stroke="#e58f5b" stroke-width="6" stroke-linecap="round"/>
+                <path d="M70 65c3 2 6 6 8 11" fill="none" stroke="#f2c9a6" stroke-width="8" stroke-linecap="round"/>
+              </svg>
+            </figure>
+            <p>Ofertas exclusivas y personalizadas para ti</p>
+          </article>
+
+        </section>
+      </section>
+
+
+      <!-- MÓDULO 2: Beneficios nivel Gold -->
+      <section class="module module-white module-gold">
+        <h3>
+          Obtén más beneficios al llegar a nivel Gold con 200 estrellas
+          <span class="gold-star">★</span>
+        </h3>
+
+        <section class="benefits-grid benefits-grid-gold" aria-label="Beneficios nivel gold">
+
+          <article class="benefit-card">
+            <figure class="benefit-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <ellipse cx="50" cy="54" rx="27" ry="28" fill="#d09b55"/>
+                <path d="M23 54h54v16c-8 7-18 10-27 10S31 77 23 70z" fill="#5f4030"/>
+                <circle cx="38" cy="37" r="3" fill="#111"/>
+                <circle cx="53" cy="33" r="3" fill="#111"/>
+                <circle cx="48" cy="44" r="2.5" fill="#111"/>
+                <circle cx="61" cy="42" r="2.5" fill="#111"/>
+                <path d="M77 33h10l10 8-8 12" fill="#f1d4a4"/>
+              </svg>
+            </figure>
+            <p>Pieza de panadería de bienvenida al Nivel Gold</p>
+          </article>
+
+          <article class="benefit-card">
+            <figure class="benefit-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="16" y="30" width="68" height="40" rx="4" fill="#c99d4f"/>
+                <path d="M16 30h68l-18 40H0z" opacity="0.15" fill="#fff"/>
+                <text x="50" y="54" font-size="10" fill="white" text-anchor="middle" font-weight="700">STARBUCKS</text>
+                <text x="50" y="64" font-size="8" fill="white" text-anchor="middle">REWARDS</text>
+              </svg>
+            </figure>
+            <p>Tarjeta Gold Digital</p>
+          </article>
+
+          <article class="benefit-card">
+            <figure class="benefit-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="34" y="28" width="32" height="42" rx="6" fill="#d5a248"/>
+                <path d="M38 32h24v34H38z" fill="#f5f5f2"/>
+                <path d="M36 28c5-8 25-8 30 0" fill="#e7e7e7"/>
+                <path d="M41 30c1 7 17 7 18 0" fill="none" stroke="#d59c39" stroke-width="2"/>
+                <path d="M63 66h18l-8 9" fill="#e3a847"/>
+              </svg>
+            </figure>
+            <p>Bebida o pieza de panadería por cada 100 Estrellas acumuladas</p>
+          </article>
+
+          <article class="benefit-card">
+            <figure class="benefit-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="24" y="34" width="50" height="38" rx="4" fill="#00754a"/>
+                <path d="M49 24l8 8M57 24l-8 8" stroke="#c99d4f" stroke-width="4" stroke-linecap="round"/>
+                <path d="M15 34l5-6M13 45l7-2M81 34l5-6" stroke="#c99d4f" stroke-width="3" />
+              </svg>
+            </figure>
+            <p>15 Estrellas cada aniversario</p>
+          </article>
+
+          <article class="benefit-card">
+            <figure class="benefit-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="31" y="40" width="38" height="44" rx="6" fill="#d5ae5a"/>
+                <rect x="35" y="45" width="30" height="35" rx="4" fill="#f5f5f2"/>
+                <ellipse cx="50" cy="40" rx="19" ry="5" fill="#c59840"/>
+                <rect x="55" y="16" width="5" height="28" rx="2" fill="#be8c2e"/>
+                <circle cx="50" cy="63" r="8" fill="#006241"/>
+              </svg>
+            </figure>
+            <p>Rellena tu vaso de café del día</p>
+          </article>
+
+          <article class="benefit-card">
+            <figure class="benefit-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="34" y="16" width="30" height="56" rx="6" fill="#8d8d8d"/>
+                <rect x="38" y="20" width="22" height="46" rx="3" fill="#f6f6f6"/>
+                <circle cx="49" cy="42" r="10" fill="#006241"/>
+                <path d="M67 65c3 2 6 6 8 11" fill="none" stroke="#f2c9a6" stroke-width="8" stroke-linecap="round"/>
+              </svg>
+            </figure>
+            <p>Ofertas exclusivas y personalizadas para ti</p>
+          </article>
+
+          <article class="benefit-card">
+            <figure class="benefit-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="30" y="44" width="40" height="40" rx="6" fill="#c59a46"/>
+                <rect x="35" y="48" width="30" height="32" rx="4" fill="#f5f5f2"/>
+                <ellipse cx="50" cy="44" rx="20" ry="5" fill="#d8d8d8"/>
+                <rect x="40" y="20" width="4" height="28" rx="2" fill="#d7d7d7"/>
+                <rect x="50" y="18" width="4" height="30" rx="2" fill="#d7d7d7"/>
+                <rect x="60" y="22" width="4" height="26" rx="2" fill="#d7d7d7"/>
+              </svg>
+            </figure>
+            <p>Ven por tu bebida de cumpleaños</p>
+          </article>
+
+          <article class="benefit-card">
+            <figure class="benefit-icon">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="28" y="35" width="44" height="50" rx="6" fill="#234e3f"/>
+                <rect x="33" y="40" width="34" height="40" rx="4" fill="#1e3932"/>
+                <ellipse cx="50" cy="35" rx="22" ry="6" fill="#3a7a5a"/>
+                <circle cx="72" cy="60" r="16" fill="#f2d8c3"/>
+              </svg>
+            </figure>
+            <p>Disfruta antes que nadie de lanzamientos exclusivos</p>
+          </article>
+
+        </section>
+      </section>
+
+
+      <!-- MÓDULO 3: Cómo ganar estrellas -->
+      <section class="module module-cream module-stars">
+        <h2>Tus cafés se convierten en estrellas y recompensas increíbles</h2>
+
+        <!-- Fórmula: 1 estrella = pago con Starbucks Card -->
+        <article class="formula-block">
+          <div class="formula-line">
+            <span class="big-star">★</span>
+            <span class="big-equals">=</span>
+            <span class="formula-icon formula-card-icon">
+              <svg viewBox="0 0 36 36" aria-hidden="true">
+                <rect x="2" y="7" width="32" height="22" rx="3" fill="#0a5c43"/>
+                <rect x="4" y="9" width="28" height="18" rx="2" fill="#1e3932"/>
+                <rect x="7" y="13" width="12" height="2" rx="1" fill="#fff"/>
+                <rect x="7" y="17" width="10" height="2" rx="1" fill="#fff"/>
+              </svg>
+            </span>
+          </div>
+          <p>Obtén una estrella por cada $10<br />pagando con Starbucks card.</p>
+        </article>
+
+        <!-- Fórmula: 1 estrella = pago en efectivo -->
+        <article class="formula-block formula-block-gap">
+          <div class="formula-line">
+            <span class="big-star">★</span>
+            <span class="big-equals">=</span>
+            <span class="formula-icon formula-cash-icon">💸</span>
+          </div>
+          <p>U obtén una estrella por cada $20<br />pagando con efectivo o tarjeta bancaria.</p>
+        </article>
+      </section>
+
+
+      <!-- MÓDULO 4: Pasos para obtener estrellas -->
+      <section class="module module-white module-steps">
+        <h2>Obtén estrellas y gana recompensas</h2>
+        <p class="module-subtitle">Así es como funciona:</p>
+
+        <section class="steps-grid">
+
+          <!-- Paso 1 -->
+          <article class="step-row">
+            <span class="step-dot">1</span>
+            <figure class="step-figure step-phone-figure">
+              <svg viewBox="0 0 60 80" aria-hidden="true">
+                <rect x="15" y="6" width="30" height="60" rx="6" fill="#37424a"/>
+                <rect x="19" y="10" width="22" height="52" rx="3" fill="#eef3ef"/>
+                <circle cx="30" cy="26" r="8" fill="#006241"/>
+                <path d="M18 36l5 3M41 36l-5 3" stroke="#d4a245" stroke-width="3"/>
+                <path d="M28 44c0 7-4 12-4 15" stroke="#e58f5b" stroke-width="5" stroke-linecap="round"/>
+              </svg>
+            </figure>
+            <p>Descarga la App y regístrate.</p>
+          </article>
+
+          <!-- Paso 2 -->
+          <article class="step-row step-row-wide">
+            <span class="step-dot">2</span>
+            <figure class="step-figure">
+              <svg viewBox="0 0 90 70" aria-hidden="true">
+                <rect x="6" y="40" width="28" height="14" rx="6" fill="#9ba7aa"/>
+                <circle cx="16" cy="57" r="6" fill="#5c6668"/>
+                <path d="M42 20h16v18H42z" fill="#dbe8e3"/>
+                <text x="50" y="30" font-size="7" text-anchor="middle" fill="#006241" font-weight="700">CAR</text>
+                <text x="50" y="37" font-size="7" text-anchor="middle" fill="#006241" font-weight="700">PICKUP</text>
+                <circle cx="50" cy="47" r="8" fill="#0f7b54"/>
+                <path d="M50 42v10M45 47h10" stroke="#fff" stroke-width="2"/>
+                <path d="M63 52c6-8 13-11 18-11" stroke="#e58f5b" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="72" cy="40" r="7" fill="#f2c9a6"/>
+              </svg>
+            </figure>
+            <p>Ordena y disfruta de tus favoritos por: <strong>Car Pickup</strong></p>
+            <span class="step-badge">★ 70</span>
+            <figure class="step-figure step-person-figure">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="52" cy="26" r="14" fill="#f2c79d"/>
+                <path d="M35 95c5-24 7-42 12-56h13c4 14 7 32 12 56" fill="#0f684d"/>
+                <path d="M58 42c8 4 14 13 16 24" stroke="#0f684d" stroke-width="18" stroke-linecap="round"/>
+              </svg>
+            </figure>
+          </article>
+
+          <!-- Paso 3 -->
+          <article class="step-row">
+            <span class="step-dot">3</span>
+            <figure class="step-figure step-phone-figure">
+              <svg viewBox="0 0 60 80" aria-hidden="true">
+                <rect x="15" y="6" width="30" height="60" rx="6" fill="#37424a"/>
+                <rect x="19" y="10" width="22" height="52" rx="3" fill="#eef3ef"/>
+                <circle cx="30" cy="26" r="8" fill="#006241"/>
+                <path d="M14 44l8 5M45 44l-8 5" stroke="#d4a245" stroke-width="3"/>
+                <rect x="33" y="42" width="18" height="12" rx="2" fill="#006241"/>
+                <text x="42" y="50" font-size="4" fill="#fff" text-anchor="middle">STARBUCKS</text>
+              </svg>
+            </figure>
+            <p>Puedes pagar con tu Starbucks Card, efectivo o tarjeta bancaria.</p>
+          </article>
+
+        </section>
+      </section>
+
+
+      <!-- MÓDULO 5: Video -->
+      <section class="module module-video">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/jt-dfCgpyyU"
+            title="Starbucks Rewards Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+
+
+      <!-- MÓDULO 6: Formas de pago -->
+      <section class="module module-cream module-payment">
+        <h2>Ordena y paga como quieras</h2>
+
+        <section class="payment-grid">
+
+          <article class="payment-rate">
+            <span>★</span>
+            <p>1 estrella por<br />cada $20</p>
+          </article>
+
+          <article class="payment-option">
+            <figure class="payment-phone payment-phone-greenqr">
+              <span class="payment-bar"></span>
+              <span class="payment-screen"></span>
+              <span class="payment-qr"></span>
+            </figure>
+            <p>Escanea el código QR y paga en efectivo o con tarjeta bancaria. <strong>SIN RECARGAR</strong></p>
+          </article>
+
+          <article class="payment-option">
+            <figure class="payment-phone payment-phone-card">
+              <span class="payment-bar"></span>
+              <span class="payment-blackcard"></span>
+              <span class="payment-qr"></span>
+            </figure>
+            <p>Añade tu tarjeta bancaria en la App, escanea y paga desde tu celular. <strong>SIN RECARGAR</strong></p>
+          </article>
+
+          <hr class="payment-line" />
+
+          <article class="payment-rate">
+            <span>★</span>
+            <p>1 estrella por<br />cada $10</p>
+          </article>
+
+          <article class="payment-option">
+            <figure class="payment-phone payment-phone-greenqr">
+              <span class="payment-bar"></span>
+              <span class="payment-colorband"></span>
+              <span class="payment-qr"></span>
+            </figure>
+            <p>Escanea y paga con Starbucks Card la forma más fácil y rápida de obtener recompensas.</p>
+          </article>
+
+          <article class="payment-option">
+            <figure class="payment-phone payment-phone-gifts">
+              <span class="gift-card gift-card-a"></span>
+              <span class="gift-card gift-card-b"></span>
+              <span class="gift-card gift-card-c"></span>
+            </figure>
+            <p>Colecciona, activa, registra, recarga y paga con tu Starbucks Card favorita.</p>
+          </article>
+
+        </section>
+      </section>
+
+
+      <!-- MÓDULO 7: Starbucks Card personalizada -->
+      <section class="module module-cream module-custom">
+        <h2>Personaliza tu experiencia con tu Starbucks Card<sup>®</sup> Favorita</h2>
+
+        <section class="custom-layout">
+          <article class="custom-text">
+            <h3>Coleccionar y/o regalar Starbucks Card, también te da recompensas</h3>
+            <p>Activa, registra y recarga para poder disfrutar de los beneficios y seguir acumulando Estrellas</p>
+          </article>
+
+          <!-- Tarjetas decorativas -->
+          <figure class="custom-cards">
+            <span class="custom-card custom-card-a">Happy<br />Mother's Day</span>
+            <span class="custom-card custom-card-b">M</span>
+          </figure>
+        </section>
+      </section>
+
+
+      <!-- MÓDULO 8: Descarga la app -->
+      <section class="module module-white module-app">
+        <h2>Una experiencia llena de recompensas y beneficios con tus favoritos</h2>
+
+        <!-- Ilustración de teléfono -->
+        <figure class="app-hero-figure">
+          <svg viewBox="0 0 180 180" aria-hidden="true">
+            <rect x="58" y="26" width="64" height="116" rx="10" fill="#8a8a8a"/>
+            <rect x="67" y="37" width="46" height="94" rx="4" fill="#dbe8e3"/>
+            <rect x="77" y="48" width="26" height="48" rx="13" fill="#fff"/>
+            <circle cx="90" cy="72" r="10" fill="#006241"/>
+            <circle cx="70" cy="70" r="6" fill="#d4a245"/>
+            <circle cx="127" cy="70" r="6" fill="#d4a245"/>
+            <circle cx="132" cy="110" r="6" fill="#d4a245"/>
+            <circle cx="67" cy="120" r="6" fill="#d4a245"/>
+            <circle cx="116" cy="90" r="15" fill="#d39c52"/>
+            <circle cx="106" cy="86" r="2.5" fill="#111"/>
+            <circle cx="121" cy="84" r="2.5" fill="#111"/>
+          </svg>
+        </figure>
+
+        <p class="app-balance-label">Consulta tu saldo</p>
+
+        <p class="app-copy">
+          Descarga la app Starbucks México, es una opción de pago sin contacto,
+          cada que vengas paga con ella, acumula estrellas y obtén recompensas.
+        </p>
+
+        <!-- Botones de descarga -->
+        <nav class="store-buttons" aria-label="Tiendas de aplicaciones">
+          <a href="#" class="store-button">
+            <span class="store-icon">🍎</span>
+            <span>
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </span>
+          </a>
+          <a href="#" class="store-button store-button-google">
+            <span class="store-icon">▶</span>
+            <span>
+              <small>GET IT ON</small>
+              <strong>Google Play</strong>
+            </span>
+          </a>
+        </nav>
+
+        <p class="gift-copy">¡Tus cafés se convierten en estrellas y recompensas increíbles!</p>
+
+        <figure class="gift-hero-figure">
+          <svg viewBox="0 0 220 180" aria-hidden="true">
+            <path d="M72 46c12-14 28-24 44-26v90c-18-2-39 12-48 30-10-18-5-69 4-94z" fill="#fff"/>
+            <path d="M116 20c20 6 45 26 60 48-18 0-43 8-60 26z" fill="#0f684d"/>
+            <path d="M111 74c20 2 49 0 73-8 8 18 4 39-8 53-18 20-54 34-67 35z" fill="#f0c9a6"/>
+            <rect x="132" y="40" width="48" height="44" rx="4" fill="#0f7b54"/>
+            <path d="M156 28v58M132 52h48" stroke="#c99d4f" stroke-width="6"/>
+            <path d="M146 28c6-11 16-11 20 0M166 28c-6-11-16-11-20 0" fill="none" stroke="#c99d4f" stroke-width="4"/>
+            <rect x="178" y="48" width="24" height="18" rx="3" fill="#0f684d"/>
+            <text x="190" y="59" font-size="8" fill="#c99d4f" text-anchor="middle" font-weight="700">100</text>
+          </svg>
+        </figure>
+      </section>
+
+
+      <!-- MÓDULO 9: Marca REWARDS -->
+      <section class="module module-white module-mark">
+        <p class="mark-title">REWARDS</p>
+      </section>
+
+
+      <!-- ── PRE-FOOTER ── -->
+      <section class="prefooter">
+        <article>
+          <h3>Sobre nosotros</h3>
+          <ul>
+            <li><a href="#">Historias Starbucks</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Atención al cliente</h3>
+          <ul>
+            <li><a href="#">Contáctanos</a></li>
+            <li><a href="#">Facturas Electrónicas</a></li>
+            <li><a href="#">Formas de comprar</a></li>
+          </ul>
+        </article>
+      </section>
+
+
+      <!-- ── FOOTER ── -->
+      <footer class="site-footer">
+
+        <!-- Redes sociales -->
+        <nav class="footer-social" aria-label="Redes sociales">
+          <a href="#">f</a>
+          <a href="#">◎</a>
+          <a href="#">𝕏</a>
+          <a href="#">▶</a>
+        </nav>
+
+        <!-- Links legales -->
+        <nav class="footer-links" aria-label="Enlaces legales">
+          <a href="#">Accesibilidad web</a>
+          <a href="#">Aviso de privacidad</a>
+          <a href="#">Boletines</a>
+          <a href="#">Condiciones de uso</a>
+          <a href="#">Mapa de sitio</a>
+          <a href="#">Preferencia sobre cookies</a>
+        </nav>
+
+        <p>© 2026. Starbucks Coffee Company. Reservados todos los derechos</p>
+
+      </footer>
+
+    </section>
+    <!-- fin content-panel -->
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,837 @@
+/* ===================================
+   rewards.css — Página de Rewards
+   Usado por: starbucks_rewards.html
+=================================== */
+
+
+/* ---- RESET BÁSICO ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green-main:  #0b7a53;
+  --green-dark:  #1e3932;
+  --green-mid:   #006241;
+  --green-soft:  #d4e9e2;
+  --cream:       #f2f0eb;
+  --gold:        #cba258;
+  --text-dark:   #18212a;
+  --text-soft:   #616161;
+  --white:       #ffffff;
+  --line:        #e7e7e7;
+  --shadow:      0 1px 8px rgba(0,0,0,0.08);
+  --font-main:   "Lato", Arial, Helvetica, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-main);
+  background: var(--white);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+a  { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+
+/* ===== HEADER ===== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.topbar {
+  min-height: 84px;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.brand-logo { width: 58px; height: 58px; display: block; }
+
+/* Links de navegación */
+.topbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.topbar-menu a {
+  display: inline-block;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: #000;
+  border-bottom: 4px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+/* Link activo con subrayado verde */
+.topbar-menu a.is-active,
+.topbar-menu a:hover { border-bottom-color: var(--green-mid); }
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.store-link { font-size: 0.92rem; font-weight: 900; color: #222; }
+
+/* Botones pill del header */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.62rem 1.22rem;
+  border-radius: 999px;
+  font-size: 0.94rem;
+  font-weight: 900;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.pill-outline { background: transparent; color: #000; border: 1.5px solid #000; }
+.pill-outline:hover { background: #000; color: var(--white); }
+
+.pill-dark { background: #000; color: var(--white); border: 1.5px solid #000; }
+.pill-dark:hover { background: #1e1e1e; }
+
+
+/* ===== LAYOUT SPLIT (izquierda fija | derecha con scroll) ===== */
+
+.rewards-layout {
+  display: flex;
+  min-height: calc(100vh - 84px);
+}
+
+
+/* ── PANEL IZQUIERDO (hero verde sticky) ── */
+
+.hero-panel {
+  width: 41.5%;
+  position: sticky;
+  top: 84px;
+  align-self: flex-start;
+  min-height: calc(100vh - 84px);
+  background: var(--green-main);
+  display: flex;
+  justify-content: center;
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 520px;
+  padding: 6.7rem 2.6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título STARBUCKS REWARDS */
+.hero-brand {
+  color: var(--white);
+  text-align: center;
+  font-size: clamp(2.9rem, 4vw, 4.7rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0.05em;
+}
+
+.hero-brand sup { font-size: 0.28em; }
+
+.hero-brand span {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  letter-spacing: 0.28em;
+}
+
+.hero-title {
+  margin-top: 2.4rem;
+  color: var(--white);
+  text-align: center;
+  font-size: clamp(2.2rem, 3vw, 3.4rem);
+  line-height: 1.14;
+  font-weight: 300;
+}
+
+/* Botones del hero */
+.hero-actions {
+  margin-top: 2.1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pill-hero-outline,
+.pill-hero-light {
+  min-height: 48px;
+  padding: 0.76rem 1.32rem;
+  border: 2px solid var(--white);
+  border-radius: 999px;
+  font-size: 0.94rem;
+  font-weight: 900;
+}
+
+.pill-hero-outline { background: transparent; color: var(--white); }
+.pill-hero-outline:hover { background: rgba(255,255,255,0.12); }
+
+.pill-hero-light { background: var(--white); color: var(--green-dark); }
+.pill-hero-light:hover { background: #f3f3f3; }
+
+/* Teléfono decorativo con estrellas doradas */
+.hero-phone-wrap {
+  margin-top: 2rem;
+  width: 245px;
+  height: 305px;
+  position: relative;
+}
+
+.hero-star { position: absolute; color: var(--gold); line-height: 1; }
+.hero-star-a { left: 40px;  bottom: 76px;  font-size: 1.5rem; }
+.hero-star-b { left: 62px;  bottom: 120px; font-size: 2.3rem; }
+.hero-star-c { left: 88px;  bottom: 58px;  font-size: 1.5rem; }
+
+.hero-phone {
+  width: 150px;
+  height: 238px;
+  position: absolute;
+  left: 88px;
+  bottom: 0;
+  border-radius: 30px;
+  background: linear-gradient(180deg, #fefefe 0%, #d9d9d9 100%);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+  transform: rotate(-28deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-phone-screen {
+  width: 112px;
+  height: 180px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fefefe 0%, #ededed 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0.9rem;
+}
+
+.hero-phone-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--green-mid);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.hero-phone-copy {
+  text-align: center;
+  font-size: 0.62rem;
+  line-height: 1.3;
+  font-weight: 900;
+  color: var(--green-dark);
+}
+
+.hero-phone-pill {
+  border-radius: 999px;
+  background: var(--green-dark);
+  color: var(--white);
+  padding: 0.24rem 0.62rem;
+  font-size: 0.6rem;
+  font-weight: 900;
+}
+
+
+/* ── PANEL DERECHO ── */
+
+.content-panel {
+  width: 58.5%;
+  background: var(--white);
+}
+
+/* Todos los módulos comparten padding horizontal */
+.module {
+  width: 100%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.module-white  { background: var(--white); }
+.module-cream  { background: var(--cream); }
+
+
+/* ===== MÓDULO: Beneficios Green ===== */
+
+.module-green {
+  padding-top: 3.5rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.module-green h2 {
+  max-width: 760px;
+  margin: 0 auto 2.8rem;
+  font-size: clamp(1.75rem, 2.15vw, 2.45rem);
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.module-green h2 strong { font-weight: 900; }
+
+/* Grid 4 columnas de beneficios */
+.benefits-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.9rem 1.1rem;
+}
+
+.benefit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: center;
+}
+
+.benefit-icon {
+  width: 98px;
+  height: 98px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-icon svg { width: 86px; height: 86px; display: block; }
+
+.benefit-card p {
+  max-width: 168px;
+  font-size: 0.96rem;
+  line-height: 1.42;
+  color: #17212c;
+}
+
+
+/* ===== MÓDULO: Beneficios Gold ===== */
+
+.module-gold {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.module-gold h3 {
+  max-width: 760px;
+  margin: 0 auto 2.3rem;
+  font-size: clamp(1.55rem, 2vw, 2.2rem);
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.gold-star { color: var(--gold); }
+
+.benefits-grid-gold { gap: 1.9rem 1.1rem; }
+
+
+/* ===== MÓDULO: Cómo ganar estrellas ===== */
+
+.module-stars {
+  padding-top: 3.1rem;
+  padding-bottom: 4.2rem;
+  text-align: center;
+}
+
+.module-stars h2 {
+  max-width: 720px;
+  margin: 0 auto 2.6rem;
+  font-size: clamp(1.9rem, 2.3vw, 2.7rem);
+  line-height: 1.24;
+  font-weight: 900;
+}
+
+.formula-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formula-block-gap { margin-top: 2.4rem; }
+
+.formula-line {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.big-star    { color: var(--gold); font-size: 3.25rem; }
+.big-equals  { font-size: 2rem; font-weight: 300; color: var(--text-soft); }
+
+.formula-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formula-card-icon svg { width: 54px; height: 54px; }
+.formula-cash-icon { font-size: 2rem; }
+.formula-block p { font-size: 1.18rem; line-height: 1.42; font-weight: 900; }
+
+
+/* ===== MÓDULO: Pasos ===== */
+
+.module-steps {
+  padding-top: 3.6rem;
+  padding-bottom: 4rem;
+}
+
+.module-steps h2 {
+  text-align: center;
+  font-size: clamp(1.95rem, 2.3vw, 2.7rem);
+  font-weight: 900;
+  margin-bottom: 0.55rem;
+}
+
+.module-subtitle {
+  text-align: center;
+  font-size: 1.14rem;
+  color: #20232a;
+  margin-bottom: 2.6rem;
+}
+
+.steps-grid {
+  max-width: 930px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.1rem;
+}
+
+.step-row { display: flex; align-items: center; gap: 1.2rem; }
+.step-row-wide { align-items: center; }
+
+/* Número del paso en círculo verde */
+.step-dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--green-dark);
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-figure { flex-shrink: 0; }
+.step-phone-figure  svg { width: 82px;  height: 104px; display: block; }
+.step-person-figure svg { width: 150px; height: 120px; display: block; }
+
+.step-row p { font-size: 1rem; line-height: 1.45; max-width: 320px; }
+.step-row p strong { font-weight: 900; }
+
+.step-badge {
+  margin-left: auto;
+  border-radius: 999px;
+  background: var(--green-dark);
+  color: var(--white);
+  padding: 0.42rem 0.84rem;
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+
+/* ===== MÓDULO: Video ===== */
+
+.module-video {
+  background: #1f1f1f;
+  padding: 2rem 3rem;
+}
+
+.video-frame {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+
+/* ===== MÓDULO: Formas de pago ===== */
+
+.module-payment {
+  padding-top: 3.7rem;
+  padding-bottom: 4rem;
+}
+
+.module-payment h2 {
+  text-align: center;
+  font-size: clamp(1.9rem, 2.2vw, 2.55rem);
+  font-weight: 900;
+  margin-bottom: 2.7rem;
+}
+
+/* Grid: estrella | opción 1 | opción 2 */
+.payment-grid {
+  max-width: 930px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 1.8rem 1.6rem;
+  align-items: center;
+}
+
+.payment-rate {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.payment-rate span { color: var(--gold); font-size: 2.2rem; }
+
+.payment-option { display: flex; align-items: flex-start; gap: 1rem; }
+.payment-option p { font-size: 0.96rem; line-height: 1.45; max-width: 260px; }
+
+/* Teléfono decorativo */
+.payment-phone {
+  width: 76px;
+  height: 146px;
+  border-radius: 12px;
+  background: #fff;
+  border: 2px solid #3d474d;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.payment-bar {
+  position: absolute;
+  top: 8px; left: 28px;
+  width: 18px; height: 4px;
+  border-radius: 2px;
+  background: #3d474d;
+}
+
+.payment-screen,
+.payment-blackcard,
+.payment-colorband,
+.payment-qr { position: absolute; }
+
+.payment-screen    { top: 24px; left: 12px; width: 50px; height: 24px; background: #0f7b54; }
+.payment-blackcard { top: 24px; left: 12px; width: 50px; height: 24px; background: #101010; }
+.payment-colorband { top: 24px; left: 12px; width: 50px; height: 24px; background: linear-gradient(90deg, #e2b95b, #67b2e8, #ef8ca5, #6bc17b); }
+
+.payment-qr {
+  bottom: 24px; left: 17px;
+  width: 40px; height: 40px;
+  background:
+    linear-gradient(90deg, #000 25%, transparent 25%) 0 0/8px 8px,
+    linear-gradient(#000 25%, transparent 25%) 0 0/8px 8px,
+    #fff;
+  border: 2px solid #000;
+}
+
+.payment-phone-greenqr::after,
+.payment-phone-card::after,
+.payment-phone-gifts::after {
+  content: "";
+  position: absolute;
+  bottom: 10px; left: 18px;
+  width: 40px; height: 6px;
+  background: #d8d8d8;
+  border-radius: 3px;
+}
+
+/* Tarjetas de regalo decorativas */
+.gift-card { position: absolute; border-radius: 6px; }
+.gift-card-a { width: 28px; height: 18px; background: #43b581; top: 36px; left: 10px; }
+.gift-card-b { width: 28px; height: 18px; background: #f28fb0; top: 58px; left: 36px; }
+.gift-card-c { width: 28px; height: 18px; background: #8a7cf5; top: 82px; left: 18px; }
+
+.payment-line { grid-column: 1 / -1; border: none; height: 1px; background: rgba(0,0,0,0.14); }
+
+
+/* ===== MÓDULO: Starbucks Card personalizada ===== */
+
+.module-custom {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.module-custom h2 {
+  text-align: center;
+  font-size: clamp(1.8rem, 2vw, 2.35rem);
+  font-weight: 900;
+  margin-bottom: 2.4rem;
+}
+
+.custom-layout {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.custom-text { flex: 1; }
+.custom-text h3 { font-size: 1.12rem; line-height: 1.35; margin-bottom: 0.75rem; font-weight: 900; }
+.custom-text p  { font-size: 1rem; line-height: 1.55; color: #2b2b2b; max-width: 420px; }
+
+/* Tarjetas decorativas superpuestas */
+.custom-cards { width: 280px; height: 160px; position: relative; flex-shrink: 0; }
+
+.custom-card {
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.8rem;
+  font-weight: 900;
+}
+
+.custom-card-a {
+  width: 158px; height: 92px;
+  top: 6px; right: 0;
+  background: linear-gradient(135deg, #ffb08b, #ffd2c5);
+  color: #fff;
+}
+
+.custom-card-b {
+  width: 168px; height: 98px;
+  left: 18px; bottom: 0;
+  background: linear-gradient(135deg, #6a1c8f, #ef5fb5);
+  color: #ffd86a;
+  font-size: 2rem;
+}
+
+
+/* ===== MÓDULO: Descarga la App ===== */
+
+.module-app {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.module-app h2 {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  font-size: clamp(1.9rem, 2.2vw, 2.7rem);
+  line-height: 1.28;
+  font-weight: 900;
+}
+
+.app-hero-figure { margin-bottom: 1.2rem; }
+.app-hero-figure svg { width: 250px; height: 200px; display: block; margin: 0 auto; }
+
+.app-balance-label { font-size: 1.3rem; font-weight: 900; margin-bottom: 1rem; }
+
+.app-copy {
+  max-width: 590px;
+  margin: 0 auto 2rem;
+  font-size: 1.02rem;
+  line-height: 1.62;
+}
+
+/* Botones App Store / Google Play */
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.2rem;
+}
+
+.store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: #000;
+  color: var(--white);
+  border-radius: 10px;
+  padding: 0.8rem 1.25rem;
+}
+
+.store-button-google { background: #252525; }
+.store-icon { font-size: 1.7rem; }
+.store-button small  { display: block; font-size: 0.66rem; opacity: 0.82; text-align: left; }
+.store-button strong { display: block; font-size: 0.98rem; font-weight: 900; text-align: left; }
+
+.gift-copy { font-size: 1.35rem; font-weight: 900; margin-bottom: 1rem; }
+.gift-hero-figure svg { width: 300px; height: 220px; display: block; margin: 0 auto; }
+
+
+/* ===== MÓDULO: REWARDS marca ===== */
+
+.module-mark { padding: 1.8rem 0 2rem; text-align: center; }
+
+.mark-title {
+  color: var(--green-dark);
+  font-size: 1.85rem;
+  letter-spacing: 0.22em;
+  font-weight: 900;
+}
+
+
+/* ===== PRE-FOOTER ===== */
+
+.prefooter {
+  border-top: 1px solid var(--line);
+  background: var(--white);
+  padding: 3rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.prefooter article { min-width: 180px; }
+.prefooter h3 { font-size: 1.05rem; font-weight: 900; margin-bottom: 1rem; }
+.prefooter li { margin-bottom: 0.75rem; }
+
+.prefooter a { font-size: 0.95rem; color: var(--text-soft); }
+.prefooter a:hover { text-decoration: underline; }
+
+
+/* ===== FOOTER ===== */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--white);
+  text-align: center;
+  padding: 2rem 3rem 2.5rem;
+}
+
+/* Iconos redes sociales */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.35rem;
+}
+
+.footer-social a {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.06rem;
+  transition: 0.2s ease;
+}
+
+.footer-social a:hover { background: #000; color: var(--white); }
+
+/* Links legales */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.footer-links a {
+  font-size: 0.84rem;
+  color: var(--text-soft);
+  padding-right: 1rem;
+  border-right: 1px solid #cfcfcf;
+}
+
+.footer-links a:last-child { border-right: none; }
+.footer-links a:hover { text-decoration: underline; }
+
+.site-footer p { font-size: 0.8rem; color: var(--text-soft); }
+
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet: layout pasa a vertical */
+@media (max-width: 1200px) {
+  .rewards-layout { flex-direction: column; }
+  .hero-panel { position: relative; top: 0; width: 100%; min-height: auto; }
+  .hero-inner { padding: 4rem 1.5rem 0; }
+  .content-panel { width: 100%; }
+}
+
+@media (max-width: 980px) {
+  .topbar { padding: 1rem 1.2rem; flex-wrap: wrap; }
+  .topbar-left, .topbar-actions { width: 100%; justify-content: center; flex-wrap: wrap; }
+
+  /* Beneficios en 2 columnas */
+  .benefits-grid,
+  .benefits-grid-gold { grid-template-columns: repeat(2, 1fr); }
+
+  .payment-grid { grid-template-columns: 1fr; }
+  .payment-line { display: none; }
+
+  .custom-layout,
+  .prefooter { flex-direction: column; }
+
+  .step-row, .step-row-wide { flex-wrap: wrap; }
+  .step-badge { margin-left: 0; }
+}
+
+/* Móvil */
+@media (max-width: 640px) {
+  .module, .prefooter, .site-footer { padding-left: 1.2rem; padding-right: 1.2rem; }
+
+  /* Beneficios en 1 columna */
+  .benefits-grid,
+  .benefits-grid-gold { grid-template-columns: 1fr; }
+
+  .hero-phone-wrap { width: 210px; height: 280px; }
+  .hero-phone { width: 138px; height: 220px; left: 64px; }
+  .hero-phone-screen { width: 104px; height: 164px; }
+
+  .hero-actions, .store-buttons { flex-direction: column; }
+}
