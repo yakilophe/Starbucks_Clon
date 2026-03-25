@@ -1,0 +1,335 @@
+/* ===================================
+   home.css — Página Principal (index.html)
+=================================== */
+
+
+/* ---- RESET BÁSICO ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f7f7;
+  color: #1e3932;
+  line-height: 1.6;
+}
+
+
+/* ===== HEADER ===== */
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #d9d9d9;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+nav img {
+  width: 52px;
+  height: auto;
+}
+
+/* Listas del nav */
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+/* Primera lista (MENU / REWARDS) separada del logo */
+nav ul:first-of-type {
+  margin-right: auto;
+  margin-left: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+}
+
+nav a:hover { color: #00754a; }
+
+/* Botones del header (Ingresar / Únete) */
+nav button {
+  font: inherit;
+  font-weight: 700;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Botón "Ingresar" — borde negro */
+nav ul:last-of-type li:nth-child(2) button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+/* Botón "Únete" — negro sólido */
+nav ul:last-of-type li:nth-child(3) button {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+nav button:hover { transform: scale(1.03); }
+
+
+/* ===== MAIN ===== */
+
+main { width: 100%; }
+
+/* Cada sección = grid de 2 columnas (imagen + texto) */
+main > section {
+  max-width: 1500px;
+  margin: 1.8rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+/* Imágenes ocupan todo su contenedor */
+figure {
+  width: 100%;
+  height: 100%;
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Texto centrado dentro de su columna */
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 4rem;
+}
+
+h1, h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.15rem;
+  max-width: 620px;
+  line-height: 1.8;
+}
+
+/* Botones dentro de article */
+article button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid #00754a;
+  background-color: transparent;
+  color: #00754a;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+article button:hover {
+  background-color: rgba(0, 117, 74, 0.08);
+}
+
+
+/* ===== COLORES POR SECCIÓN ===== */
+
+/* Sección 1 — Hero (fondo crema) */
+main > section:nth-of-type(1) { background-color: #efe9dd; }
+main > section:nth-of-type(1) article h1 { color: #00754a; font-size: 3.2rem; }
+main > section:nth-of-type(1) article p  { color: #00754a; font-size: 1.2rem; }
+
+/* Sección 2 — Lavanda (fondo oliva claro) */
+main > section:nth-of-type(2) { background-color: #d7d7b8; }
+main > section:nth-of-type(2) article h2,
+main > section:nth-of-type(2) article p  { color: #1e3932; }
+
+/* Sección 3 — Recompensas (fondo verde oscuro) */
+main > section:nth-of-type(3) { background-color: #1f3b2f; }
+main > section:nth-of-type(3) article h2,
+main > section:nth-of-type(3) article p  { color: #f3e9c9; }
+
+/* Sección 4 — Termos (fondo verde medio) */
+main > section:nth-of-type(4) { background-color: #00754a; }
+main > section:nth-of-type(4) article h2,
+main > section:nth-of-type(4) article p  { color: #f3e9c9; }
+
+/* Sección 5 — Bloques grandes (dos columnas sin imagen) */
+main > section:nth-of-type(5) {
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background-color: transparent;
+}
+
+main > section:nth-of-type(5) article {
+  min-height: 620px;
+  padding: 2.5rem;
+  justify-content: space-between;
+}
+
+main > section:nth-of-type(5) article:first-child {
+  background-color: #00754a;
+  color: #f2ebe3;
+}
+
+main > section:nth-of-type(5) article:last-child {
+  background-color: #efe9dd;
+  color: #1e3932;
+}
+
+/* Títulos con borde decorativo estilo Starbucks */
+main > section:nth-of-type(5) article h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 12px solid currentColor;
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+main > section:nth-of-type(5) article p {
+  font-size: 1rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Botones sección 5 */
+main > section:nth-of-type(5) article:first-child button {
+  border-color: #f2ebe3;
+  color: #f2ebe3;
+}
+main > section:nth-of-type(5) article:first-child button:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+main > section:nth-of-type(5) article:last-child button {
+  border-color: #1e3932;
+  color: #1e3932;
+}
+main > section:nth-of-type(5) article:last-child button:hover {
+  background-color: rgba(30,57,50,0.08);
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+  margin-top: 2rem;
+  background-color: #ffffff;
+  border-top: 1px solid #d9d9d9;
+  padding: 2.5rem 2rem 2rem;
+}
+
+/* Links de categorías */
+footer > section:first-child {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+footer ul { list-style: none; }
+
+/* Título de cada columna */
+footer ul li:first-child {
+  font-size: 1.9rem;
+  color: #1e3932;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+footer ul li {
+  margin-bottom: 1rem;
+  color: #6b7280;
+  font-size: 1.05rem;
+}
+
+/* Copyright */
+footer > section:last-child {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: right;
+  padding-top: 2rem;
+  color: #8a8a8a;
+  font-size: 0.95rem;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  h1, h2 { font-size: 2.3rem; }
+
+  /* Secciones pasan a 1 columna */
+  main > section,
+  main > section:nth-of-type(5) { grid-template-columns: 1fr; }
+
+  article { padding: 2.5rem 2rem; }
+
+  main > section:nth-of-type(5) article h2 { font-size: 3.2rem; }
+
+  footer > section:first-child {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav ul:first-of-type { margin: 0; }
+  nav ul { flex-wrap: wrap; justify-content: center; }
+
+  h1, h2 { font-size: 2rem; }
+  p { font-size: 1rem; }
+
+  main > section:nth-of-type(5) article { min-height: 450px; }
+
+  main > section:nth-of-type(5) article h2 {
+    font-size: 2.5rem;
+    padding: 2.5rem 1.5rem;
+    border-width: 8px;
+  }
+
+  footer ul li:first-child { font-size: 1.5rem; }
+}
