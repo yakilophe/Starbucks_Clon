@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menú | Starbucks México</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="menu.css"/>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <nav class="topbar" aria-label="Principal">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="Ir al inicio">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png"
+          alt="Starbucks"
+          class="logo-img"
+        />
+      </a>
+
+      <!-- Links de navegación (MENU activo) -->
+      <ul class="menu-links">
+        <li><a href="starbucks_menu.html" class="nav-link nav-link--activo">MENU</a></li>
+        <li><a href="starbucks_rewards.html" class="nav-link">REWARDS</a></li>
+      </ul>
+
+      <!-- Botones de acción -->
+      <ul class="menu-actions">
+        <li><a href="#" class="store-link">📍 Localizar Tienda</a></li>
+        <li><a href="starbucks_login.html" class="btn btn-outline">Ingresar</a></li>
+        <li><a href="starbucks_register.html" class="btn btn-dark">Únete</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="menu-page">
+
+    <!-- Introducción -->
+    <section class="intro">
+      <p class="intro-kicker">¡Disfrútalos!</p>
+      <h1 class="intro-title">Conoce nuestras bebidas y alimentos de temporada</h1>
+    </section>
+
+    <!-- ── BEBIDAS ── -->
+    <section class="menu-section" aria-labelledby="bebidas-title">
+      <h2 id="bebidas-title" class="menu-section-title">Bebidas</h2>
+
+      <ul class="category-grid category-grid--3">
+
+        <li>
+          <a href="#" class="category-card">
+            <figure class="category-media">
+              <img src="assets__starbucks/bebidascalientes.png" alt="Bebidas calientes">
+            </figure>
+            <p class="category-name">Bebidas calientes</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="category-card">
+            <figure class="category-media">
+              <img src="assets__starbucks/frapuccinno.png" alt="Frappuccino®">
+            </figure>
+            <p class="category-name">Frappuccino®</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="category-card">
+            <figure class="category-media">
+              <img src="assets__starbucks/bebbidafria.png" alt="Bebidas Frías">
+            </figure>
+            <p class="category-name">Bebidas Frías</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="category-card">
+            <figure class="category-media">
+              <img src="assets__starbucks/bebidate.png" alt="Bebidas Base a te">
+            </figure>
+            <p class="category-name">Bebidas Base Té</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="category-card">
+            <figure class="category-media">
+              <img src="assets__starbucks/coldbrew.png" alt="Cold brew">
+            </figure>
+            <p class="category-name">Cold Brew</p>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- ── ALIMENTOS ── -->
+    <section class="menu-section" aria-labelledby="alimentos-title">
+      <h2 id="alimentos-title" class="menu-section-title">Alimentos</h2>
+
+      <ul class="category-grid category-grid--1">
+        <li>
+          <a href="#" class="category-card">
+            <figure class="category-media category-media--ring">
+              <img src="assets__starbucks/sandwiche.png" alt="Elige tu complemento favorito">
+            </figure>
+            <p class="category-name">Elige tu complemento favorito</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ── CAFÉ EN GRANO ── -->
+    <section class="menu-section" aria-labelledby="cafe-title">
+      <h2 id="cafe-title" class="menu-section-title">Café en grano</h2>
+
+      <ul class="category-grid category-grid--1">
+        <li>
+          <a href="#" class="category-card">
+            <figure class="category-media">
+              <img src="assets__starbucks/cafeengrano.png" alt="Elige tu café favorito">
+            </figure>
+            <p class="category-name">Elige tu café favorito</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+
+  <!-- ===== PRE-FOOTER (links informativos) ===== -->
+  <section class="prefooter" aria-label="Enlaces informativos">
+
+    <article>
+      <h3>Sobre Nosotros</h3>
+      <ul>
+        <li><a href="#">Trabaja con nosotros</a></li>
+        <li><a href="#">Historias Starbucks</a></li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Atención al cliente</h3>
+      <ul>
+        <li><a href="#">Contáctanos</a></li>
+        <li><a href="#">Facturas Electrónicas</a></li>
+        <li><a href="#">Formas de comprar</a></li>
+      </ul>
+    </article>
+
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+
+    <!-- Redes sociales -->
+    <nav class="social-links" aria-label="Redes sociales">
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="Instagram">◎</a>
+      <a href="#" aria-label="X">𝕏</a>
+      <a href="#" aria-label="YouTube">▶</a>
+    </nav>
+
+    <!-- Links legales -->
+    <nav class="legal-links" aria-label="Legales">
+      <a href="#">Accesibilidad Web</a>
+      <a href="#">Aviso de Privacidad</a>
+      <a href="#">Boletines</a>
+      <a href="#">Condiciones de uso</a>
+      <a href="#">Mapa del sitio</a>
+      <a href="#">Preferencias sobre cookies</a>
+    </nav>
+
+    <p class="copyright">© 2026. Starbucks Coffee Company. Reservados todos los derechos.</p>
+
+  </footer>
+
+</body>
+</html>

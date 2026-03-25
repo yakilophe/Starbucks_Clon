@@ -1,0 +1,342 @@
+/* ===================================
+   menu.css — Página de Menú
+   Usado por: starbucks_menu.html
+=================================== */
+
+
+/* ---- RESET BÁSICO ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green-dark:  #173f35;
+  --green-main:  #1e3932;
+  --green-soft:  #dbe8e3;
+  --text-dark:   #1f1f1f;
+  --text-soft:   #6b7280;
+  --line:        #cfcfcf;
+  --bg:          #f6f6f6;
+  --white:       #ffffff;
+  --black:       #000000;
+}
+
+body {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+a  { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+
+/* ===== HEADER ===== */
+
+.site-header {
+  background-color: var(--white);
+  border-bottom: 1px solid #dddddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topbar {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 1.4rem 2.25rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo-img { width: 72px; display: block; }
+
+/* Links de navegación */
+.menu-links,
+.menu-actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.menu-links { margin-right: auto; }
+
+.nav-link {
+  color: var(--black);
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+/* Subrayado verde en el link activo */
+.nav-link--activo {
+  position: relative;
+  border-bottom: 3px solid var(--green-main);
+  padding-bottom: 4px;
+}
+
+.store-link {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Botones del header */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 118px;
+  height: 42px;
+  padding: 0 1.2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: 0.2s ease;
+}
+
+.btn-outline {
+  color: var(--black);
+  border: 1px solid var(--black);
+  background-color: transparent;
+}
+
+.btn-dark {
+  color: var(--white);
+  border: 1px solid var(--black);
+  background-color: var(--black);
+}
+
+.btn:hover,
+.store-link:hover,
+.nav-link:hover { opacity: 0.82; }
+
+
+/* ===== PÁGINA DE MENÚ ===== */
+
+.menu-page {
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 0;
+}
+
+/* Introducción superior */
+.intro {
+  padding: 2rem 0 3rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.intro-kicker {
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-bottom: 0.8rem;
+  color: var(--black);
+}
+
+.intro-title {
+  max-width: 720px;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  font-weight: 900;
+  color: #17212c;
+}
+
+
+/* ===== SECCIONES DEL MENÚ ===== */
+
+.menu-section {
+  padding: 2rem 0 3.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.menu-section-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 2.25rem;
+  color: #17212c;
+}
+
+/* Grid de tarjetas — 3 columnas para bebidas */
+.category-grid {
+  display: grid;
+  gap: 2rem 3rem;
+}
+
+.category-grid--3 {
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  align-items: start;
+}
+
+/* 1 columna para alimentos y café en grano */
+.category-grid--1 {
+  grid-template-columns: minmax(240px, 320px);
+}
+
+/* Tarjeta individual */
+.category-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Círculo verde con la imagen */
+.category-media {
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--green-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+}
+
+/* Variante con anillo exterior (alimentos) */
+.category-media--ring {
+  box-shadow: 0 0 0 14px var(--green-soft);
+}
+
+.category-media img {
+  max-width: 74%;
+  max-height: 74%;
+  object-fit: contain;
+  display: block;
+}
+
+.category-name {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #17212c;
+  max-width: 280px;
+}
+
+
+/* ===== PRE-FOOTER ===== */
+
+.prefooter {
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2.5rem;
+  display: flex;
+  gap: 6rem;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.prefooter article { min-width: 240px; }
+
+.prefooter h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+  color: #17212c;
+}
+
+.prefooter ul { list-style: none; }
+.prefooter li + li { margin-top: 1.3rem; }
+
+.prefooter a {
+  font-size: 1.1rem;
+  color: var(--text-soft);
+}
+
+.prefooter a:hover { color: var(--green-main); }
+
+
+/* ===== FOOTER ===== */
+
+.site-footer {
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 3rem;
+}
+
+/* Iconos de redes sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.social-links a {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--black);
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+
+.social-links a:hover { opacity: 0.75; }
+
+/* Links legales */
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2rem;
+  margin-bottom: 1.4rem;
+}
+
+.legal-links a {
+  font-size: 0.98rem;
+  color: #8a8f98;
+}
+
+.legal-links a:hover { text-decoration: underline; }
+
+.copyright {
+  text-align: center;
+  color: #8a8f98;
+  font-size: 0.95rem;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .topbar { flex-wrap: wrap; justify-content: center; }
+  .menu-links { margin-right: 0; }
+  .intro-title { font-size: 2.5rem; }
+
+  /* Bebidas pasan a 2 columnas */
+  .category-grid--3 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+
+  .prefooter { flex-direction: column; gap: 2.5rem; }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  .topbar { padding: 1rem; gap: 1rem; }
+  .logo-img { width: 60px; }
+
+  .menu-links,
+  .menu-actions { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+
+  .menu-page,
+  .prefooter,
+  .site-footer { padding-left: 1rem; padding-right: 1rem; }
+
+  .intro-title { font-size: 2rem; }
+  .menu-section-title { font-size: 1.6rem; }
+
+  /* Todo en 1 columna */
+  .category-grid--3,
+  .category-grid--1 { grid-template-columns: 1fr; justify-items: center; }
+
+  .category-media { width: 190px; }
+  .category-name { font-size: 0.95rem; }
+}
