@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starbucks | Inicia Sesión</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <nav class="topbar">
+      <a href="index.html" class="brand-link">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/200px-Starbucks_Corporation_Logo_2011.svg.png"
+          alt="Starbucks"
+          class="brand-logo"
+        />
+      </a>
+      <ul class="topbar-menu">
+        <li><a href="starbucks_menu.html">MENÚ</a></li>
+        <li><a href="starbucks_rewards.html">REWARDS</a></li>
+      </ul>
+      <ul class="topbar-actions">
+        <li><a href="#" class="store-link">📍 LOCALIZA TU TIENDA</a></li>
+        <li><a href="starbucks_login.html" class="pill pill-outline is-active">Inicia Sesión</a></li>
+        <li><a href="starbucks_register.html" class="pill pill-dark">Únete Ahora</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="auth-layout">
+
+    <!-- Panel izquierdo verde -->
+    <aside class="auth-hero">
+      <h1 class="auth-hero-title">Ingresa a tu cuenta ✨</h1>
+    </aside>
+
+    <!-- Panel derecho con el formulario -->
+    <section class="auth-form-panel">
+      <div class="auth-form-wrap">
+        <h2 class="form-title">Inicia Sesión</h2>
+
+        <!-- Formulario de login -->
+        <div class="form-group">
+          <label for="email">* Ingresa tu email</label>
+          <input type="email" id="email" placeholder="Ingresa tu email" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">* Ingresa tu contraseña</label>
+          <div class="input-icon-wrap">
+            <input type="password" id="password" placeholder="Ingresa tu contraseña" />
+            <button class="toggle-password" aria-label="Mostrar contraseña">👁</button>
+          </div>
+        </div>
+
+        <a href="#" class="forgot-link">Olvidé mi contraseña</a>
+
+        <!-- reCAPTCHA (placeholder visual) -->
+        <div class="captcha-box">
+          <input type="checkbox" id="robot" />
+          <label for="robot">No soy un robot</label>
+          <span class="captcha-logo">reCAPTCHA</span>
+        </div>
+
+        <button class="btn-submit">Iniciar Sesión</button>
+
+        <p class="switch-link">
+          ¿No tienes cuenta? <a href="starbucks_register.html">Regístrate aquí</a>
+        </p>
+      </div>
+
+      <!-- Banner inferior -->
+      <div class="auth-banner">
+        <p>¡SER PARTE DE STARBUCKS REWARDS™ ES MUY FÁCIL!</p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

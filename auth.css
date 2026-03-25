@@ -1,0 +1,402 @@
+/* ===================================
+   auth.css — Login y Registro
+   Compartido entre:
+     starbucks_login.html
+     starbucks_register.html
+=================================== */
+
+/* ---- RESET BÁSICO ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green-main:  #0b7a53;
+  --green-dark:  #1e3932;
+  --green-mid:   #006241;
+  --cream:       #f2f0eb;
+  --white:       #ffffff;
+  --text-dark:   #18212a;
+  --text-soft:   #616161;
+  --line:        #e7e7e7;
+  --shadow:      0 1px 8px rgba(0,0,0,0.08);
+  --font:        "Lato", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--cream);
+  color: var(--text-dark);
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+
+/* ===== HEADER ===== */
+
+.site-header {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topbar {
+  min-height: 80px;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.brand-logo { width: 52px; display: block; }
+
+.topbar-menu {
+  display: flex;
+  gap: 1.6rem;
+  margin-right: auto;
+  margin-left: 1.5rem;
+}
+
+.topbar-menu a {
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  padding-bottom: 4px;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.topbar-menu a:hover { border-bottom-color: var(--green-mid); }
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.store-link {
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+/* Botones del header */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 900;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+
+.pill-outline {
+  border: 1.5px solid #000;
+  background: transparent;
+  color: #000;
+}
+
+.pill-outline:hover, .pill-outline.is-active {
+  background: #000;
+  color: var(--white);
+}
+
+.pill-dark {
+  background: #000;
+  color: var(--white);
+  border: 1.5px solid #000;
+}
+
+.pill-dark.is-active {
+  background: var(--green-mid);
+  border-color: var(--green-mid);
+}
+
+
+/* ===== LAYOUT SPLIT (izquierda verde | derecha formulario) ===== */
+
+.auth-layout {
+  display: flex;
+  min-height: calc(100vh - 80px);
+}
+
+/* Panel izquierdo verde */
+.auth-hero {
+  width: 42%;
+  background: var(--green-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.auth-hero-title {
+  color: var(--white);
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Panel derecho */
+.auth-form-panel {
+  width: 58%;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form-wrap {
+  flex: 1;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+}
+
+.form-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+
+/* ===== CAMPOS DEL FORMULARIO ===== */
+
+.form-group {
+  margin-bottom: 1.4rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-bottom: 1.5px solid #aaa;
+  background: transparent;
+  font-family: var(--font);
+  font-size: 1rem;
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-bottom-color: var(--green-mid);
+}
+
+/* Dos columnas (nombre/apellido o mes/día) */
+.form-row {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.form-row .form-group { flex: 1; }
+.form-row select { flex: 1; }
+
+/* Texto de ayuda debajo del label */
+.form-hint {
+  font-size: 0.83rem;
+  color: var(--text-soft);
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--text-soft);
+}
+
+/* Input con ícono al lado */
+.input-icon-wrap {
+  position: relative;
+}
+
+.input-icon-wrap input { padding-right: 2.5rem; }
+
+.toggle-password {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-soft);
+}
+
+/* Link "olvidé contraseña" */
+.forgot-link {
+  display: block;
+  color: var(--green-mid);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.forgot-link:hover { text-decoration: underline; }
+
+
+/* ===== CAPTCHA (placeholder visual) ===== */
+
+.captcha-box {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border: 1px solid var(--line);
+  background: var(--white);
+  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.captcha-box label {
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.captcha-logo {
+  font-size: 0.7rem;
+  color: var(--text-soft);
+}
+
+
+/* ===== BOTÓN PRINCIPAL ===== */
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 999px;
+  background: var(--green-mid);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 900;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 1.2rem;
+}
+
+.btn-submit:hover { background: var(--green-dark); }
+
+/* Link para cambiar entre login y registro */
+.switch-link {
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+}
+
+.switch-link a {
+  color: var(--green-mid);
+  font-weight: 700;
+}
+
+.switch-link a:hover { text-decoration: underline; }
+
+
+/* ===== SECCIÓN REWARDS (solo en registro) ===== */
+
+.rewards-section {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.rewards-section h3 {
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+}
+
+.rewards-section p {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin-bottom: 1rem;
+}
+
+.radio-group { display: flex; flex-direction: column; gap: 0.7rem; }
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"] { accent-color: var(--green-mid); }
+
+
+/* ===== TÉRMINOS Y CONDICIONES (solo en registro) ===== */
+
+.terms-section {
+  margin-bottom: 1.5rem;
+}
+
+.terms-section h3 {
+  font-size: 1rem;
+  font-weight: 900;
+  margin-bottom: 0.8rem;
+}
+
+.check-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.check-label input[type="checkbox"] { accent-color: var(--green-mid); margin-top: 2px; }
+.check-label a { color: var(--green-mid); text-decoration: underline; }
+
+
+/* ===== BANNER INFERIOR (solo en login) ===== */
+
+.auth-banner {
+  background: var(--green-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .auth-layout { flex-direction: column; }
+  .auth-hero { width: 100%; min-height: 180px; }
+  .auth-form-panel { width: 100%; }
+}
+
+@media (max-width: 640px) {
+  .topbar { flex-wrap: wrap; justify-content: center; padding: 1rem; }
+  .topbar-menu { margin: 0; }
+  .form-row { flex-direction: column; gap: 0; }
+}
